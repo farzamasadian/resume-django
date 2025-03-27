@@ -1,5 +1,6 @@
+{% extends "resume/base.html" %}
 {% load static %}
-
+{% block content %}
 
 <!-- Page Content-->
 <div class="container-fluid p-0">
@@ -8,32 +9,24 @@
         <div class="resume-section-content">
             <h2 class="mb-5">Projects</h2>
             <div class="row">
-                <div class="col-md-5">
-                    <div class="project-card">
-                        <h3 class="project-name">Resume Website</h3>
-                        <p class="project-description">A personal portfolio website to showcase my skills and
-                            projects.</p>
-                        <a href="https://github.com/farzamasadian/resume-django" class="btn btn-primary"
-                            target="_blank">View
-                            Project</a>
-                    </div>
-                    <div class="col-md-20">
-                        <div class="project-card">
-                            <h3 class="project-name">Machine Learning practice</h3>
-                            <p class="project-description">A machine learning model practice built with Python and
-                                scikit-learn.</p>
-                            <a href="https://github.com/farzamasadian/ml-practice" class="btn btn-primary"
-                                target="_blank">View Project</a>
-                        </div>
+                {% for project in projects %}
+                <div class="col-md-5 mb-4">
+                    <div class="project-card p-3 shadow rounded-2xl">
+                        <h3 class="project-name">{{ project.name }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        <a href="{{ project.link }}" class="btn btn-primary" target="_blank">View Project</a>
                     </div>
                 </div>
+                {% empty %}
+                <p>No projects to show at the moment.</p>
+                {% endfor %}
             </div>
+        </div>
     </section>
 </div>
 
-<!-- Bootstrap core JS-->
+<!-- Bootstrap core JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="{% static 'js/scripts.js' %}"></script>
-</body>
 
-</html>
+{% endblock %}

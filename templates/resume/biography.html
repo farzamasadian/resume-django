@@ -1,21 +1,14 @@
+{% extends "resume/base.html" %}
 {% load static %}
-
+{% block content %}
 <section class="resume-section" id="biography">
     <div class="resume-section-content">
         <h2 class="mb-5">Biography</h2>
         <p>
-            Born in Ramsar and raised in Karaj, I graduated from Sharif University of Technology and am now
-            transitioning
-            to the field of Information Technology for my master's degree. During my formative years as a university
-            student, I developed a profound passion for Python and the art of coding. The act of creating applications
-            feels akin to breathing life into inanimate constructs—a testament to the boundless potential of human
-            ingenuity.
+            {{ bio }}
         </p>
-        <p>
-            Post-graduation, my intellectual pursuits have expanded to encompass a diverse array of fields, including
-            machine learning, backend development, network security, cryptography, blockchain, and even the emerging
-            realm of quantum computing. I am driven by an insatiable curiosity to continuously broaden the horizons
-            of my knowledge.
-        </p>
+
     </div>
 </section>
+
+{% endblock %}

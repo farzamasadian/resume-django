@@ -1,3 +1,14 @@
-<h2 class="mb-5">Interests</h2>
-<p>I enjoy exploring backend development, data science, network security, blockchain and probability modeling. In my
-    free time, I like reading, solving puzzles, and staying updated with technology advancements.</p>
+{% extends "resume/base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="resume-section" id="biography">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Interests</h2>
+        <p>
+        <p>{{ interests }}</p>
+
+    </div>
+</section>
+
+{% endblock %}

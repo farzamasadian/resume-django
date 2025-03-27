@@ -1,5 +1,16 @@
-<h2 class="mb-5">Languages</h2>
-<ul>
-    <li>Persian (Native)</li>
-    <li>English (Proficient)</li>
-</ul>
+{% extends "resume/base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="resume-section" id="languages">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Languages</h2>
+        <ul>
+            {% for language in languages %}
+            <li>{{ language.name }} ({{ language.level }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+{% endblock %}

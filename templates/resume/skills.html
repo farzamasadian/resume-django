@@ -1,10 +1,16 @@
+{% extends "resume/base.html" %}
+{% load static %}
+{% block content %}
+
 <section class="resume-section" id="skills">
     <div class="resume-section-content">
         <h2 class="mb-5">Skills</h2>
         <ul>
-            <li>Python, C++, HTML, CSS, JavaScript</li>
-            <li>Django, Docker, Linux, PostgreSQL</li>
-            <li>Git, Containerization, Network Security</li>
+            {% for skill in skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
         </ul>
     </div>
 </section>
+
+{% endblock %}
