@@ -1,0 +1,49 @@
+{% extends "resume/base.html" %}
+
+{% block content %}
+{% include "resume/about.html" %}
+<hr class="m-0" />
+{% include "resume/education.html" %}
+<hr class="m-0" />
+{% include "resume/skills.html" %}
+
+<!-- Languages -->
+<section class="resume-section" id="languages">
+    <div class="resume-section-content">
+        {% include 'resume/languages.html' %}
+    </div>
+</section>
+<hr class="m-0" />
+<!-- Projects -->
+<section class="resume-section" id="projects">
+    <div class="resume-section-content">
+        {% include 'resume/projects.html' %}
+    </div>
+</section>
+<hr class="m-0" />
+
+<!-- Interests -->
+<section class="resume-section" id="interests">
+    <div class="resume-section-content">
+        {% include 'resume/interests.html' %}
+    </div>
+</section>
+<hr class="m-0" />
+
+<!-- Biography -->
+<section class="resume-section" id="biography">
+    <div class="resume-section-content">
+        {% include 'resume/biography.html' %}
+    </div>
+</section>
+<hr class="m-0" />
+
+
+<!-- contact -->
+<section class="resume-section" id="contact">
+    <div class="resume-section-content">
+        {% include 'resume/contact.html' %}
+    </div>
+</section>
+<hr class="m-0" />
+{% endblock %}
